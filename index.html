@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Personal Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/d9dd51a874.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo">
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact us</a></li>  
+          </ul>
+          
+      </nav>
+      <div class="header-text">
+        <p>Full Stack Developer</p>
+        <h1>Hi, I'm <span>Pravallika  </span>from India</h1>
+      </div >
+    </div>
+  </div>
+<!--------about-------->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+          <img src="images/user.jpg"alt="profile picture">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1><br>
+        <p>Third-year BTech Computer Science student specializing in AI & ML with a strong interest in             
+            Machine learning and web development.Eager to apply technical skills in a challenging software    
+            development and dedicated to delivering high-quality solutions and gaining industry knowledge</p>
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('Education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul> 
+            <li><span>Full Stack Development</span><br>Designing Web/App Interfaces</li>
+            <li><span>Soft Skills</span><br>Communication Skills, Problem Solving ability</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="Education">
+          <ul>
+            <li><span>2022-current</span><br>BTech from Anil Neerukonda Institute of Techonology and Sciences </li>
+            <li><span>2022</span><br>Class 12 from Sri Chaitanya Junior college </li>
+            <li><span>2020</span><br>Class 10 from Smt.Godavaridevi Saraf High School</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+<!----------portfolio---------->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/work-1.png" alt="picture">
+        <div class="layer">
+            <h3>Car Rental System</h3>
+            <p>Developed a car rental system using Java for frontend and MySQL for backend</p>
+           <br> <a href="'#"><i class="fa-solid fa-link"></i></a>                         
+        </div>
+      </div>
+        <div class="work">
+        <img src="images/work-2.png" alt="picture">
+        <div class="layer">
+            <h3>Food Waste management</h3>
+            <p>Developed a food waste management system using html,css and javascipt , phpmyadmin</p>
+           <br> <a href="'#"><i class="fa-solid fa-link"></i></a>                         
+        </div>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-----contact------>
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="content-left">
+        <h1 class="sub-title">Contact me</h1><br>
+        <p><i class="fas fa-map-marker-alt"></i>  Visakhapatnam,Andhra Pradesh</p><br>
+        <p><i class="fas fa-paper-plane"></i> kuppilipravallika@gmail.com</p><br>
+        <p><i class="fa-solid fa-phone"></i> 7981398806</p><br>
+        <a href="images/resume.pdf" download class="btn ">Download Resume</a>
+    </div>
+
+    <div class="content-right">
+      <h1 class="sub-title">Send Message</h1><br>
+      <form action="form.php" method="post">
+        <input type="text" name="name" class="field" placeholder="Your Name" required><br>
+        <input type="email" name="email" class="field" placeholder="Your Email" required><br>
+        <textarea name="message" rows="6" class="field" placeholder="Your Message" required></textarea><br>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      
+    </div>
+  </div>
+</div>
+ 
+<script>
+  var tablinks=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents");
+  
+  function opentab(tabname){
+    for (tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+        for (tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab")
+  }
+
+</script>
+</body>
+
+</html>
